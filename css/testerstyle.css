@@ -261,8 +261,15 @@ body {
 
 .animate-image {
   opacity: 0;
-  animation: fadeInImages 1.5s ease-out forwards;
-  animation-delay: 0.5s;
+  /* animation: fadeInImages 1.5s ease-out forwards; */
+  /* animation-delay: 0.5s; */
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+/* Make images visible when the class is added */
+.animate-image.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Staggered animation for images */
