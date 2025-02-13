@@ -132,7 +132,21 @@ body {
   /* Show Menu Toggle and Hide Inline Menu */
   .navbar .menu {
     display: none;
+    column-count: 2; /* 2 columns for tablets */
+
   }
+
+@media screen and (max-width: 600px) {
+    .image-container {
+        column-count: 2; /* Keep 2 columns for mobile instead of single column */
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .image-container {
+        column-count: 1; /* Falls back to 1 column on very small screens */
+    }
+}
 
   .menu-toggle {
     display: flex;
